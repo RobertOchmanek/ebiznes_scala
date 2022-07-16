@@ -3,11 +3,20 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-GET           /whatever                controllers.WhateverController.getAll
-GET           /whatever/:itemId        controllers.WhateverController.getById(itemId: Long)
+GET           /categories                    controllers.CategoryController.getAll
+GET           /categories/:categoryId        controllers.CategoryController.getById(categoryId: Long)
+POST          /categories                    controllers.CategoryController.add()
+PUT           /categories/:categoryId        controllers.CategoryController.updateById(categoryId: Long)
+DELETE        /categories/:categoryId        controllers.CategoryController.deleteById(categoryId: Long)
 
-PUT           /whatever/:itemId        controllers.WhateverController.updateById(itemId: Long)
+GET           /products                      controllers.ProductController.getAll
+GET           /products/:productId           controllers.ProductController.getById(productId: Long)
+POST          /products                      controllers.ProductController.add()
+PUT           /products/:productId           controllers.ProductController.updateById(productId: Long)
+DELETE        /products/:productId           controllers.ProductController.deleteById(productId: Long)
 
-POST          /whatever                controllers.WhateverController.add()
-
-DELETE        /whatever/:itemId        controllers.WhateverController.deleteById(itemId: Long)
+GET           /users                         controllers.UserController.getAll
+GET           /users/:userId                 controllers.UserController.getById(userId: Long)
+POST          /users                         controllers.UserController.add()
+PUT           /users/:userId                 controllers.UserController.updateById(userId: Long)
+DELETE        /users/:userId                 controllers.UserController.deleteById(userId: Long)
